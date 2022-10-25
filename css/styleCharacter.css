@@ -1,0 +1,113 @@
+@import url("header.css");
+
+@keyframes movingName{
+    0%{
+        display: none;
+        left: 70%;
+    }
+
+    100%{
+        left: 0%;
+    }
+}
+
+.content{
+    background-image: url(../assets/Character.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+}
+
+.rowingContent{
+    padding: 20px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    opacity: 70%;
+    border-radius: 20px;
+}
+
+.rowingContent:hover {
+    opacity: 100%;
+    transition: 0.6s;
+    background-color: rgba(241, 241, 241, 0.801);
+}
+
+.rowingContent:hover .moving{
+    animation-play-state: running;
+}
+
+
+.imgEula,.imgDiluc,.imgBarbara,.imgMakix,.imgMona{
+    width: 33%;
+    height: 500px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.imgEula{
+    background-image: url("../assets/Eula.jpg");
+}
+
+.imgDiluc{
+    background-image: url("../assets/Diluc.jpg");
+}
+
+.imgBarbara{
+    background-image: url("../assets/Barbara.jpg");
+}
+
+.imgMakix{
+    background-image: url("../assets/Makix.jpg");
+}
+
+.imgMona{
+    background-image: url("../assets/Mona.jpg");
+}
+
+
+.imgDesc{
+    width: 50%;
+    height: auto;
+    padding:20px;
+    background-color: white;
+    border-radius: 20px;
+
+}
+
+.moving{
+    animation-name: movingName;
+    animation-duration: 0.3s;
+    position: relative;
+    animation-play-state: paused;
+}
+
+h4{
+    font-size: 50px;
+    color: black;
+    text-shadow:10px 8px rgba(141, 101, 101, 0.226);
+    position: relative;
+}
+
+h1{
+    font-size: 30px;
+    color: black;
+}
+
+@media only screen and (max-width: 1000px) {
+    .rowingContent{
+        flex-direction: column;
+        align-items: center;
+    }
+    .imgDesc{
+        margin-top: 20px;
+    }
+    .imgEula,.imgDiluc,.imgBarbara,.imgMakix,.imgMona{
+        width: 50%;
+        
+    }
+  }
+

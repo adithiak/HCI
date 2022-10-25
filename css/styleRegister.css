@@ -1,0 +1,229 @@
+@import url("header.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'cursive', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(../assets/Login.png);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size:cover ;
+    background-repeat: no-repeat;
+}
+
+.data{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 500px;
+    color: rgb(19, 20, 20);
+    background-color: rgba(108, 123, 138, 0.322);
+    border-radius: 20px;
+    text-align: center;
+    padding: 50px 25px 10px 35px;
+}
+
+.data header{
+    font-size: 50px;
+    font-weight: 600;
+    background: inherit;
+    text-align: center;
+}
+
+.data .register-form{
+    width: 100%;
+    overflow: hidden; 
+}
+
+.register-form form{
+    display: flex;
+    width: 400%;
+}
+
+.register-form form .page{
+    width: 30%;
+    transition: margin-left 0.5s ease-in-out;
+}
+
+.register-form form .page .title{
+    text-align: left;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.register-form form .page .field{
+    text-align: justify; 
+    height: 50px;
+    width: 430px;
+    margin-top: 70px;
+    display: flex;
+    position: relative;
+}
+
+.register-form form .page .field .label{
+    position: absolute;
+    top: -50px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.register-form form .page .field input{
+    width: 100%;
+    height: 100%;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+form .page .field select{
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+}
+
+.register-form form .page .field button{
+    width: 100%;
+    height: 50px;
+    margin-top: -20px;
+    border: none;
+    background: #72d5fcf5;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 10px;
+    letter-spacing: 5px; 
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+
+.register-form form .page .field button:hover{
+    background: grey;
+}
+
+.register-form form .page .datacheck{
+    color: rgb(82, 199, 238);
+    font-size: 20px;
+    margin: auto;
+}
+
+.register-form form .page .btn button{
+    margin-top: -20px!important;
+}
+
+form .page .btn button.prev{
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+form .page .btn button.next{
+    margin-left: 5px;
+}
+
+.data .process{
+    display: flex;
+    margin: auto;
+}
+
+.data .process .step{
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.process .step p{
+    font-size: 20px;
+    font-weight: 500;
+    color:rgb(224, 236, 240);
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.process .step p.active{
+   color: rgb(82, 199, 238);  
+}
+
+.process .step .bullet{
+    width: 30px;
+    height: 30px;
+    border: 5px solid rgb(224, 236, 240);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.process .step:last-child .bullet:before, .process .step:last-child .bullet:after{
+    display: none;
+}
+
+.process .step .bullet:before, .process .step .bullet:after{
+    content: '';
+    height: 5px;
+    width: 80px;
+    right: -85px;
+    bottom: 8px;
+    transition: 0.5s;
+    position: absolute;
+    background: rgba(185, 212, 240, 0.322);
+}
+
+.process .step .bullet.active{
+    background:rgb(82, 199, 238);
+    border-color:rgb(82, 199, 238);
+}
+
+.process .step .bullet.active:after{
+    background: lightblue;
+    animation: animate 0.5s linear forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.process .step span{
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.process .step .bullet.active span{
+    display: none;
+}
+
+.process .step .check{
+    position: absolute;
+    display: none;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    top: 70%;
+    left: 50%;
+}
+
+.process .step .check.active{
+    display: block;
+    color: #fff;
+
+}

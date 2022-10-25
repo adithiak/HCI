@@ -1,0 +1,24 @@
+@import url("header.css");
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-image: url(../assets/Gallery.jpg);
+    background-size: contain;
+}
+
+.fillContent{
+    padding: 50px;
+}
+
+.img{
+   width: 100%; 
+}
+
+.img:hover{
+    transform: scale(1.1,1.1);
+    transition: 1s;
+}

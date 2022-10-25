@@ -1,0 +1,54 @@
+@import url("header.css");
+
+@keyframes linings{
+    0%{ 
+        left: 0%;
+    }
+    50% {
+        left: 98%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+.content{
+    background-image: url("../assets/AboutGame.jpg");
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+}
+
+.contentBackground{
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    align-items: center;
+    justify-content: center;
+    opacity: 80%;
+    padding: 40px;
+    border-radius: 25px; 
+}
+
+
+.liningAnimation{
+    animation-name:linings;
+    animation-duration: 2.5s;
+    position: relative;
+}
+
+h4{
+    text-decoration: underline;
+    font-size: 50px;
+    color: black;
+}
+
+h1{
+    font-size: 30px;
+    color: black;
+}
+
+
+

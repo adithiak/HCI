@@ -1,0 +1,116 @@
+@import url("header.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'cursive', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(../assets/Login.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.data{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 40%;
+    color: rgb(19, 20, 20);;
+    background-color: rgba(108, 123, 138, 0.322);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 40px;
+}
+
+.data header{
+    background-color:inherit;
+    font-size: 50px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data .login-form{
+    width: 100%; 
+    height: 100%;
+}
+
+.login-form form .page .field{
+    text-align: center; 
+    height: 63px;
+    width: 100%;
+    margin: 50px 0 50px 0;
+    position: relative;
+}
+
+.login-form form .page .field .label{
+    position: absolute;
+    top: -30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.login-form form .page .field input{
+    width: 100%;
+    height: 100%;
+    border: 5px solid lightblue;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.login-form #error1, .login-form #error2{
+    margin-top: 5px;
+    margin-left:4px;
+    font-size: 20px;
+    color: rgb(224, 70, 70);
+}
+
+.login-form form .page .field button{
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: #72d5fcf5;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 10px;
+    letter-spacing: 5px; 
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+
+.login-form form .page .field button:hover{
+    background: grey;
+}
+
+
+
+@media only screen and (max-width: 1150px) {
+    .data{
+        width: 50%;
+    }
+     }
+  @media only screen and (max-width: 900px) {
+    .data{
+        width: 60%;
+    }
+     }
+
+     @media only screen and (max-width: 800px) {
+        .data{
+            width: 80%;
+        }
+         }

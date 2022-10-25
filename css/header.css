@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,body{
+    width: 100%;
+    height: auto;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-border-img{
+    border-right: 50px solid black;
+}
+
+.navigation-block .header-block{
+    width: 300px;
+}
+
+.navigation-block:hover{
+    background: rgba(161, 161, 161, 0.76);
+    transition: 1s;
+}
+
+.navigation-block:hover .dropdown{
+    display: block;
+    background: rgba(161, 161, 161, 0.76);
+}
+
+.dropdown{
+    display: none;
+    z-index: 1;
+    position: relative;
+}
+
+.dropdown div{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown div:hover{
+    transition: 1s;
+    background: rgba(0, 0, 0, 0.116);
+}
+
+.justify-logo{
+    display: flex;
+    flex-direction: row;
+}
+
+.justify-header{
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.header-block{
+    height: 80px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}
+
+.justify-header a{
+    position: relative;
+}
+
+.justify-header a:after{
+    content: "";
+    background: black;
+    display: block;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    bottom: 10px;
+    visibility: hidden;
+    transition: 0.4s;
+    width: 0%;
+}
+
+.justify-header a:hover:after { 
+    width: 100%; 
+    left: 0; 
+    visibility: visible;
+    background:white;
+}
+
+footer{
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    display: flex;
+    bottom: 0px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+ 
+footer a{
+    margin-right: 20px;
+}
+
+.logo{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.logoFacebook{
+    position: relative;
+    bottom: 9px;
+}
+
+.logoYoutube{
+    position: relative;
+    bottom: 1px;
+}
+
+
+.footerCP{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    header {
+      height: 200px;
+    }
+
+    .header-border-img{
+        margin-left: 50px; ;
+    }
+
+    .justify-logo,.justify-header{
+        flex-direction: column;
+    }
+
+    .justify-header .header-block{
+        width: 200px;
+    }
+    
+    .justify-header{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .justify-header a:hover:after { 
+        width: 200px; 
+    }
+
+  }
+
